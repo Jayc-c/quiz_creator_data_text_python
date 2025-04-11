@@ -11,3 +11,9 @@ def get_valid_answer(prompt):
             return answer 
         else: 
             print("Invalid input. Please enter 'a', 'b', 'c', or 'd' ONLY.") 
+
+# Create a function to create the quiz
+def create_quiz():
+    # Get the questions and answers from the user and save them to a file.
+    filename = "quiz_data.txt" 
+    questions = [] 
