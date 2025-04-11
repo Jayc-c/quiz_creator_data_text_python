@@ -18,7 +18,7 @@ def create_quiz():
     filename = "quiz_data.txt" 
     questions = [] 
 
-    print("\n WELCOME TO THE QUIZ CREATOR! ")
+    print("\n🚀 WELCOME TO THE QUIZ CREATOR!💥")
     print("Be creative, and don't be afraid to make some great questions!\n")
 
     # Create an infinite loop to keep asking the user for question.
@@ -53,9 +53,9 @@ def create_quiz():
         try: 
             with open(filename, 'w') as outfile: 
                 json.dump(questions, outfile, indent=4) 
-            print(f"\n Done! Your questions are now saved in '{filename}'!")
+            print(f"\n😄 Done! Your questions are now saved in '{filename}'!")
         except Exception as e:
-            print(f" Oops! Couldn't save the file: {e}")
+            print(f"⚠️ Oops! Couldn't save the file: {e}")
     else: # If the user didn't add any questions.
         print("\n😴 No questions added.")
 
