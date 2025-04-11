@@ -20,3 +20,11 @@ def create_quiz():
 
     print("\n WELCOME TO THE QUIZ CREATOR! ")
     print("Be creative, and don't be afraid to make some great questions!\n")
+
+    # Create an infinite loop to keep asking the user for question.
+    # Until they decided to stop.
+    while True: 
+        print("-" * 47) 
+        question = input("Enter your question (or type 'exit' to finish):\n")
+        if question.lower() == 'exit': 
+            break
