@@ -36,3 +36,6 @@ def create_quiz():
         options['b'] = input("b) ") 
         options['c'] = input("c) ") 
         options['d'] = input("d) ") 
+
+        # Ask the user to input the correct answer (a, b, c, or d)
+        correct_answer = get_valid_answer("Enter the letter of the correct answer: ") 
