@@ -1,6 +1,5 @@
-# import modules
+# import module
 import json 
-import os 
 
 # Create a function to get a valid answer.
 def get_valid_answer(prompt):
