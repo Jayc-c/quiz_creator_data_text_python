@@ -28,3 +28,11 @@ def create_quiz():
         question = input("Enter your question (or type 'exit' to finish):\n")
         if question.lower() == 'exit': 
             break
+        
+        # Create a place to store the answer choices provided by the user (a, b, c, d).
+        options = {} 
+        print("\nEnter the possible answers:") 
+        options['a'] = input("a) ") 
+        options['b'] = input("b) ") 
+        options['c'] = input("c) ") 
+        options['d'] = input("d) ") 
