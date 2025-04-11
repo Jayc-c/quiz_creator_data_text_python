@@ -17,3 +17,6 @@ def create_quiz():
     # Get the questions and answers from the user and save them to a file.
     filename = "quiz_data.txt" 
     questions = [] 
+
+    print("\n WELCOME TO THE QUIZ CREATOR! ")
+    print("Be creative, and don't be afraid to make some great questions!\n")
