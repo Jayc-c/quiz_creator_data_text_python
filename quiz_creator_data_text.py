@@ -39,3 +39,10 @@ def create_quiz():
 
         # Ask the user to input the correct answer (a, b, c, or d)
         correct_answer = get_valid_answer("Enter the letter of the correct answer: ") 
+
+        # Compile the question, options, and correct answer together to the questions list.
+        questions.append({
+            'question': question,
+            'options': options,
+            'correct_answer': correct_answer
+        })
