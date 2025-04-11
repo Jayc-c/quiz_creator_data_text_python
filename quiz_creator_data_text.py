@@ -58,3 +58,5 @@ def create_quiz():
             print(f" Oops! Couldn't save the file: {e}")
     else: # If the user didn't add any questions.
         print("\n😴 No questions added.")
+
+create_quiz()
