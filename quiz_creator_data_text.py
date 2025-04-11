@@ -46,3 +46,13 @@ def create_quiz():
             'options': options,
             'correct_answer': correct_answer
         })
+
+    # Check if questions exist and save them to a JSON file,
+    # handling errors and empty lists.
+    if questions: 
+        try: 
+            with open(filename, 'w') as outfile: 
+                json.dump(questions, outfile, indent=4) 
+            print(f"\n Done! Your questions are now saved in '{filename}'!")
+        except Exception as e:
+            print(f" Oops! Couldn't save the file: {e}")
