@@ -19,3 +19,6 @@ def load_quiz_from_file(filename):
         # handle invalid JSON.
         messagebox.showerror("Error", "Invalid quiz file format.")
         return []
+
+# created the main function to run the quiz GUI.
+def run_quiz_gui(quiz_file):
