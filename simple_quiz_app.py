@@ -64,3 +64,11 @@ def run_quiz_gui(quiz_file):
                 label_question.config(text="Error: Question format incorrect (missing options).")
         else:
             show_results() # Show results if no more questions.
+
+    # Check the selected answer.
+    def check_answer():
+        nonlocal score
+        if 0 <= current_question_index < len(quiz_questions):
+            question_data = quiz_questions[current_question_index]
+            correct_answer = question_data.get('correct_answer', '').lower()
+            user_answer = answer_var.get()
