@@ -72,3 +72,17 @@ def run_quiz_gui(quiz_file):
             question_data = quiz_questions[current_question_index]
             correct_answer = question_data.get('correct_answer', '').lower()
             user_answer = answer_var.get()
+            
+            # Compare and update score/feedback.
+            if user_answer == correct_answer:
+                label_result.config(text="Correct!", fg="green")
+                score += 1
+            else:
+                options = question_data.get('options', {})
+                correct_text = options.get(correct_answer, "N/A")
+                label_result.config(text=f"Wrong! Correct answer: {correct_text}", fg="red")
+            
+            button_next.config(state=tk.NORMAL) # Enable next.
+            for rb in radio_buttons:             # Disable options.
+                rb.config(state=tk.DISABLED)
+            button_submit.config(state=tk.DISABLED) # Disable submit.
