@@ -48,3 +48,19 @@ def run_quiz_gui(quiz_file):
             label_question.config(text=question_data.get('question', ''))
             options = question_data.get('options', {})
             option_keys = list(options.keys())
+
+            if len(option_keys) == 4:
+                # Configure and show radio buttons.
+                for i in range(4):
+                    radio_buttons[i].config(text=f"{option_keys[i].upper()}. {options[option_keys[i]]}", value=option_keys[i])
+                    radio_buttons[i].pack(anchor=tk.W)
+                answer_var.set(None)             # Clear selection.
+                label_result.config(text="")     # Clear previous result.
+                button_next.config(state=tk.DISABLED) # Disable next until answer.
+                for rb in radio_buttons:         # Enable radio buttons.
+                    rb.config(state=tk.NORMAL)
+                button_submit.config(state=tk.NORMAL) # Enable submit.
+            else:
+                label_question.config(text="Error: Question format incorrect (missing options).")
+        else:
+            show_results() # Show results if no more questions.
