@@ -29,6 +29,13 @@ def run_quiz_gui(quiz_file):
     if not quiz_questions:
         return
 
-    current_question_index = 0  # Track current question.
-    score = 0                   # User's score.
-    start_time = 0              # Quiz start time.
+    current_question_index = 0  # track current question.
+    score = 0                   # user's score.
+    start_time = 0              # quiz start time.
+
+    # created function to update and display quiz timer.
+    def update_timer():
+        if start_time and quiz_questions:
+            elapsed = time.time() - start_time
+            label_time.config(text=f"Time: {elapsed:.1f} seconds")
+        window.after(100, update_timer)
