@@ -86,3 +86,9 @@ def run_quiz_gui(quiz_file):
             for rb in radio_buttons:             # Disable options.
                 rb.config(state=tk.DISABLED)
             button_submit.config(state=tk.DISABLED) # Disable submit.
+
+    # Advance to the next question.
+    def next_question():
+        nonlocal current_question_index
+        current_question_index += 1
+        show_question()
