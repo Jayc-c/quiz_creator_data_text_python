@@ -12,3 +12,10 @@ def load_quiz_from_file(filename):
         with open(filename, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
+        # handle missing file.
+        messagebox.showerror("Error", f"File '{filename}' not found.")
+        return []
+    except json.JSONDecodeError:
+        # handle invalid JSON.
+        messagebox.showerror("Error", "Invalid quiz file format.")
+        return []
