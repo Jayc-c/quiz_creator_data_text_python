@@ -102,3 +102,7 @@ def run_quiz_gui(quiz_file):
             f"Time: {elapsed_time:.1f} seconds"
         )
         label_question.config(text=final_text)
+
+        # hide all quiz elements.
+        for widget in [rb for rb in radio_buttons] + [button_submit, label_result, button_next, label_time]:
+            widget.pack_forget()
