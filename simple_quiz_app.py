@@ -29,3 +29,6 @@ def run_quiz_gui(quiz_file):
     if not quiz_questions:
         return
 
+    current_question_index = 0  # Track current question.
+    score = 0                   # User's score.
+    start_time = 0              # Quiz start time.
