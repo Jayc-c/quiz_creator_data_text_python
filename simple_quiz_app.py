@@ -130,3 +130,13 @@ def run_quiz_gui(quiz_file):
 
     label_time = tk.Label(window, text="")
     label_time.pack(pady=5)
+
+    # start quiz if questions are loaded.
+    if quiz_questions:
+        random.shuffle(quiz_questions) # Randomize question order.
+        show_question()                # Display first question.
+        start_time = time.time()       # Record quiz start time.
+        update_timer()                 # Start timer updates.
+        window.mainloop()              # Start Tkinter event loop.
+    else:
+        messagebox.showinfo("Info", "No quiz questions to play.")
