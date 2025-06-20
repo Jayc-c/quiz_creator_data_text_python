@@ -112,3 +112,21 @@ def run_quiz_gui(quiz_file):
     label_question.pack(pady=10)
     radio_buttons = []
     answer_var = tk.StringVar()
+
+    # created 4 radio buttons.
+    for i in range(4):
+        rb = tk.Radiobutton(window, text="", variable=answer_var, value=chr(ord('a') + i))
+        radio_buttons.append(rb)
+        rb.pack(anchor=tk.W)
+
+    button_submit = tk.Button(window, text="Submit Answer", command=check_answer)
+    button_submit.pack(pady=10)
+
+    label_result = tk.Label(window, text="")
+    label_result.pack(pady=10)
+
+    button_next = tk.Button(window, text="Next Question", command=next_question)
+    button_next.pack(pady=10)
+
+    label_time = tk.Label(window, text="")
+    label_time.pack(pady=5)
