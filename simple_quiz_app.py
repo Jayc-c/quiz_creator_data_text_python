@@ -140,3 +140,7 @@ def run_quiz_gui(quiz_file):
         window.mainloop()              # Start Tkinter event loop.
     else:
         messagebox.showinfo("Info", "No quiz questions to play.")
+
+# run the quiz on script execution.
+if __name__ == "__main__":
+    run_quiz_gui("quiz_data.txt")
